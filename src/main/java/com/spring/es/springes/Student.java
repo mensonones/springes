@@ -3,24 +3,24 @@ package com.spring.es.springes;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
 
-@Document(indexName = "springes", type = "aluno")
-public class Aluno {
+@Document(indexName = "springes", type = "Student")
+public class Student {
 
     @Id
     private String id;
-    private String nome;
+    private String name;
     private String email;
-    private int idade;
+    private int age;
 
-    public Aluno(){
+    public Student(){
 
     }
 
-    public Aluno(String id, String nome, String email, int idade){
+    public Student(String id, String name, String email, int age){
         this.id = id;
-        this.nome = nome;
+        this.name = name;
         this.email = email;
-        this.idade = idade;
+        this.age = age;
     }
 
     public String getId() {
@@ -31,12 +31,12 @@ public class Aluno {
         this.id = id;
     }
 
-    public String getNome() {
-        return nome;
+    public String getName() {
+        return name;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getEmail() {
@@ -47,21 +47,21 @@ public class Aluno {
         this.email = email;
     }
 
-    public int getIdade() {
-        return idade;
+    public int getAge() {
+        return age;
     }
 
-    public void setIdade(int idade) {
-        this.idade = idade;
+    public void setAge(int age) {
+        this.age = age;
     }
 
     @Override
     public String toString() {
-        return "Aluno{" +
+        return "Student{" +
                 "id='" + id + '\'' +
-                ", nome='" + nome + '\'' +
+                ", name='" + name + '\'' +
                 ", email='" + email + '\'' +
-                ", idade=" + idade +
+                ", age=" + age +
                 '}';
     }
 }

@@ -8,10 +8,10 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface AlunoRepository extends ElasticsearchRepository<Aluno, String> {
+public interface StudentRepository extends ElasticsearchRepository<Student, String> {
 
-    List<Aluno> findByNome(String nome);
-    Page<Aluno> findByNome(String nome, Pageable pageable);
-    List<Aluno> findByIdade(int idade);
+    List<Student> findByName(String name);
+    Page<Student> findByName(String name, Pageable pageable);
+    List<Student> findByAge(int age);
 
 }
